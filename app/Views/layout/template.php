@@ -17,64 +17,129 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 rel="stylesheet"
 >
 
+<style>
+
+body{
+    overflow-x: hidden;
+}
+
+.sidebar{
+    min-height: 100vh;
+    background: #0f172a;
+}
+
+.sidebar .nav-link{
+    color: #cbd5e1;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar .nav-link:hover{
+    background: #1e293b;
+    color: white;
+}
+
+.sidebar .nav-link i{
+    margin-right: 10px;
+}
+
+.logo-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.content-area{
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+</style>
+
 </head>
 
-<body class="bg-light">
-
-<nav class="navbar navbar-dark bg-dark shadow">
-
-    <div class="container-fluid">
-
-        <span class="navbar-brand">
-            Traceability System
-        </span>
-
-        <a href="/logout" class="btn btn-danger btn-sm">
-            Logout
-        </a>
-
-    </div>
-
-</nav>
+<body>
 
 <div class="container-fluid">
 
     <div class="row">
 
-        <div class="col-md-2 bg-white shadow-sm min-vh-100 p-3">
+        <!-- SIDEBAR -->
+        <div class="col-md-2 sidebar p-3">
 
-            <h5>MENU</h5>
-
-            <hr>
+            <div class="logo-title mb-4">
+                TRACEABILITY
+            </div>
 
             <ul class="nav flex-column">
 
                 <li class="nav-item mb-2">
+
                     <a href="/" class="nav-link">
-                        <i class="bi bi-house"></i>
+
+                        <i class="bi bi-house-door-fill"></i>
+
                         Dashboard
+
                     </a>
+
                 </li>
 
                 <li class="nav-item mb-2">
+
                     <a href="/produk" class="nav-link">
-                        <i class="bi bi-box"></i>
+
+                        <i class="bi bi-box-seam"></i>
+
                         Produk
+
                     </a>
+
                 </li>
 
                 <li class="nav-item mb-2">
+
                     <a href="/batch" class="nav-link">
+
                         <i class="bi bi-upc-scan"></i>
+
                         Batch
+
                     </a>
+
+                </li>
+
+                <li class="nav-item mb-2">
+
+                    <a href="/traceability" class="nav-link">
+
+                        <i class="bi bi-diagram-3-fill"></i>
+
+                        Traceability
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item mt-4">
+
+                    <a href="/logout" class="nav-link text-danger">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        Logout
+
+                    </a>
+
                 </li>
 
             </ul>
 
         </div>
 
-        <div class="col-md-10 p-4">
+        <!-- CONTENT -->
+        <div class="col-md-10 p-4 content-area">
 
             <?= $this->renderSection('content') ?>
 
