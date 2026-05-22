@@ -1,51 +1,57 @@
-<form action="/saveproses"
-method="post">
+<?= $this->extend('layout/template') ?>
 
-Batch ID
+<?= $this->section('content') ?>
 
-<input
-type="number"
-name="batch_id">
+<div class="container-fluid py-4">
 
-<br>
+    <div class="card shadow border-0">
 
+        <div class="card-body">
 
-Status
+            <h3 class="mb-4">
+                Tambah Proses
+            </h3>
 
-<input
-type="text"
-name="status">
+            <form>
 
-<br>
+                <div class="mb-3">
 
-Lokasi
+                    <label class="form-label">
+                        Status
+                    </label>
 
-<input
-type="text"
-name="lokasi">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan status"
+                    >
 
-<br>
+                </div>
 
-Tanggal
+                <div class="mb-3">
 
-<input
-type="date"
-name="tanggal">
+                    <label class="form-label">
+                        Lokasi
+                    </label>
 
-<br>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan lokasi"
+                    >
 
-Keterangan
+                </div>
 
-<textarea
-name="keterangan">
-</textarea>
+                <button class="btn btn-primary">
+                    Simpan
+                </button>
 
-<br>
+            </form>
 
-<button>
+        </div>
 
-Simpan
+    </div>
 
-</button>
+</div>
 
-</form>
+<?= $this->endSection() ?>

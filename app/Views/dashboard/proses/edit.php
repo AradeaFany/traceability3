@@ -1,60 +1,57 @@
-<form
-action="/updateproses/<?= $proses['id']; ?>"
-method="post">
+<?= $this->extend('layout/template') ?>
 
+<?= $this->section('content') ?>
 
+<div class="container-fluid py-4">
 
-Status
+    <div class="card shadow border-0">
 
-<input
-type="text"
-name="status"
+        <div class="card-body">
 
-value="
-<?= $proses['status']; ?>
-">
+            <h3 class="mb-4">
+                Edit Proses
+            </h3>
 
-<br>
+            <form>
 
+                <div class="mb-3">
 
-Lokasi
+                    <label class="form-label">
+                        Status
+                    </label>
 
-<input
-type="text"
-name="lokasi"
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="Distribusi"
+                    >
 
-value="
-<?= $proses['lokasi']; ?>
-">
+                </div>
 
-<br>
+                <div class="mb-3">
 
+                    <label class="form-label">
+                        Lokasi
+                    </label>
 
-Tanggal
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="Bandung"
+                    >
 
-<input
-type="date"
-name="tanggal"
+                </div>
 
-value="
-<?= $proses['tanggal']; ?>
-">
+                <button class="btn btn-warning">
+                    Update
+                </button>
 
-<br>
+            </form>
 
+        </div>
 
-<textarea
-name="keterangan">
+    </div>
 
-<?= $proses['keterangan']; ?>
+</div>
 
-</textarea>
-
-
-<button>
-
-Update
-
-</button>
-
-</form>
+<?= $this->endSection() ?>

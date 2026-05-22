@@ -20,39 +20,70 @@ rel="stylesheet"
 <style>
 
 body{
-    overflow-x: hidden;
+    overflow-x:hidden;
+    background:#f8fafc;
 }
 
 .sidebar{
-    min-height: 100vh;
-    background: #0f172a;
-}
-
-.sidebar .nav-link{
-    color: #cbd5e1;
-    padding: 12px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.sidebar .nav-link:hover{
-    background: #1e293b;
-    color: white;
-}
-
-.sidebar .nav-link i{
-    margin-right: 10px;
+    min-height:100vh;
+    background:#0f172a;
 }
 
 .logo-title{
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    text-align:center;
+}
+
+.sidebar .nav-link{
+    color:#cbd5e1;
+    padding:12px 15px;
+    border-radius:10px;
+    transition:0.3s;
+    margin-bottom:5px;
+}
+
+.sidebar .nav-link:hover{
+    background:#1e293b;
+    color:white;
+}
+
+.sidebar .nav-link i{
+    margin-right:10px;
 }
 
 .content-area{
-    background: #f8fafc;
-    min-height: 100vh;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+.card{
+    border-radius:15px;
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.btn{
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        min-height:auto;
+    }
+
+    .logo-title{
+        margin-bottom:20px;
+    }
+
+    .content-area{
+        padding:20px !important;
+    }
+
 }
 
 </style>
@@ -65,7 +96,6 @@ body{
 
     <div class="row">
 
-        <!-- SIDEBAR -->
         <div class="col-md-2 sidebar p-3">
 
             <div class="logo-title mb-4">
@@ -74,7 +104,7 @@ body{
 
             <ul class="nav flex-column">
 
-                <li class="nav-item mb-2">
+                <li class="nav-item">
 
                     <a href="/" class="nav-link">
 
@@ -86,7 +116,7 @@ body{
 
                 </li>
 
-                <li class="nav-item mb-2">
+                <li class="nav-item">
 
                     <a href="/produk" class="nav-link">
 
@@ -98,7 +128,7 @@ body{
 
                 </li>
 
-                <li class="nav-item mb-2">
+                <li class="nav-item">
 
                     <a href="/batch" class="nav-link">
 
@@ -110,13 +140,37 @@ body{
 
                 </li>
 
-                <li class="nav-item mb-2">
+                <li class="nav-item">
+
+                    <a href="/proses" class="nav-link">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                        Proses
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
 
                     <a href="/traceability" class="nav-link">
 
-                        <i class="bi bi-diagram-3-fill"></i>
+                        <i class="bi bi-geo-alt-fill"></i>
 
                         Traceability
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="/qr" class="nav-link">
+
+                        <i class="bi bi-qr-code"></i>
+
+                        QR Code
 
                     </a>
 
@@ -138,7 +192,6 @@ body{
 
         </div>
 
-        <!-- CONTENT -->
         <div class="col-md-10 p-4 content-area">
 
             <?= $this->renderSection('content') ?>

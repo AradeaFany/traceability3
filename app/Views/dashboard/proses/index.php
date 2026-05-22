@@ -2,77 +2,94 @@
 
 <?= $this->section('content') ?>
 
-<h2>Data Proses</h2>
+<div class="container-fluid py-4">
 
-<a href="/proses/tambah">
-Tambah
-</a>
+    <div class="d-flex justify-content-between align-items-center mb-4">
 
+        <div>
 
-<table border="1">
+            <h2 class="fw-bold">
+                Data Proses
+            </h2>
 
-<tr>
+            <p class="text-muted">
+                Monitoring proses distribusi produk
+            </p>
 
-<th>ID</th>
-<th>Status</th>
-<th>Lokasi</th>
-<th>Tanggal</th>
-<th>Keterangan</th>
+        </div>
 
-<th>Aksi</th>
+        <a href="#" class="btn btn-primary">
 
-</tr>
+            + Tambah Proses
 
+        </a>
 
-<?php foreach($proses as $p): ?>
+    </div>
 
-<tr>
+    <div class="card shadow border-0">
 
-<td>
-<?= $p['id']; ?>
-</td>
+        <div class="card-body">
 
-<td>
-<?= $p['status']; ?>
-</td>
+            <div class="table-responsive">
 
-<td>
-<?= $p['lokasi']; ?>
-</td>
+                <table class="table table-hover align-middle">
 
-<td>
-<?= $p['tanggal']; ?>
-</td>
-<td>
-<?= $p['keterangan']; ?>
-</td>
+                    <thead class="table-dark">
 
-<td>
+                        <tr>
 
-<a
-href="/editproses/<?= $p['id']; ?>"
-class="btn btn-warning">
+                            <th>No</th>
+                            <th>Status</th>
+                            <th>Lokasi</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
 
-Edit
+                        </tr>
 
-</a>
+                    </thead>
 
+                    <tbody>
 
-<a
-href="/hapusproses/<?= $p['id']; ?>"
-class="btn btn-danger">
+                        <tr>
 
-Hapus
+                            <td>1</td>
 
-</a>
+                            <td>
 
-</td>
+                                <span class="badge bg-success">
+                                    Distribusi
+                                </span>
 
-</tr>
+                            </td>
 
-<?php endforeach; ?>
+                            <td>Bandung</td>
 
+                            <td>22 Mei 2026</td>
 
-</table>
+                            <td>
+
+                                <button class="btn btn-warning btn-sm">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger btn-sm">
+                                    Hapus
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <?= $this->endSection() ?>
