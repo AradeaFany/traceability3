@@ -60,7 +60,7 @@
         Aktivitas Supply Chain
     </h4>
 
-    <table class="table table-bordered">
+    <table class="table table-hover">
 
         <thead>
 
@@ -78,7 +78,22 @@
             <tr>
                 <td>1</td>
                 <td>Beras Premium</td>
-                <td>Diproses</td>
+                <td>
+                    <span class="badge bg-success">
+                        Diproses
+                    </span>
+                </td>
+                <td>22 Mei 2026</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Kopi Arabica</td>
+                <td>
+                    <span class="badge bg-primary">
+                        Distribusi
+                    </span>
+                </td>
                 <td>22 Mei 2026</td>
             </tr>
 

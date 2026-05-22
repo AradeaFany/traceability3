@@ -91,19 +91,19 @@
         TRACEABILITY
     </div>
 
-    <a href="#">
+    <a href="/dashboard">
         <i class="bi bi-grid-fill"></i> Dashboard
     </a>
 
-    <a href="#">
+    <a href="/produk">
         <i class="bi bi-box-seam"></i> Produk
     </a>
 
-    <a href="#">
+    <a href="/dashboard">
         <i class="bi bi-upc-scan"></i> Batch
     </a>
 
-    <a href="#">
+    <a href="/dashboard">
         <i class="bi bi-gear-fill"></i> Proses
     </a>
 
