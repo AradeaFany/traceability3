@@ -169,7 +169,7 @@
             Silakan login untuk melanjutkan
         </div>
 
-        <form action="/login-process" method="post">
+        <form action="/ceklogin" method="post">
 
             <div class="mb-3">
 

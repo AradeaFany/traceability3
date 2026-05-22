@@ -22,6 +22,16 @@ $routes->get(
 'Auth::login'
 );
 
+$routes->post(
+'/ceklogin',
+'Auth::cekLogin'
+);
+
+$routes->get(
+'/dashboard',
+'Dashboard::index'
+);
+
 $routes->get(
 '/logout',
 'Auth::logout'
