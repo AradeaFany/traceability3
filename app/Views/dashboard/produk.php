@@ -2,100 +2,97 @@
 
 <?= $this->section('content') ?>
 
-<div class="topbar">
+<div class="d-flex justify-content-between align-items-center mb-4">
 
-    <h3>
-        Data Produk
-    </h3>
+    <h2>Data Produk</h2>
 
-    <p class="text-muted">
-        Manajemen Produk Supply Chain
-    </p>
+    <button class="btn btn-primary">
+        + Tambah Produk
+    </button>
 
 </div>
 
-<div class="card p-4">
+<div class="card shadow border-0">
 
-    <div class="d-flex justify-content-between mb-4">
+    <div class="card-body">
 
-        <h4>List Produk</h4>
+        <table class="table table-hover align-middle">
 
-        <button class="btn btn-primary">
-            + Tambah Produk
-        </button>
+            <thead class="table-dark">
+
+                <tr>
+                    <th>No</th>
+                    <th>Nama Produk</th>
+                    <th>Kategori</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>Kopi Arabica</td>
+
+                    <td>Minuman</td>
+
+                    <td>
+                        <span class="badge bg-success">
+                            Aktif
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-warning btn-sm">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Hapus
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td>Coklat Premium</td>
+
+                    <td>Makanan</td>
+
+                    <td>
+                        <span class="badge bg-primary">
+                            Distribusi
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-warning btn-sm">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Hapus
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
 
     </div>
-
-    <table class="table table-hover">
-
-        <thead class="table-dark">
-
-            <tr>
-                <th>No</th>
-                <th>Nama Produk</th>
-                <th>Kategori</th>
-                <th>Supplier</th>
-                <th>Status</th>
-                <th>Aksi</th>
-            </tr>
-
-        </thead>
-
-        <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>Beras Premium</td>
-                <td>Pangan</td>
-                <td>PT Maju Tani</td>
-                <td>
-                    <span class="badge bg-success">
-                        Aktif
-                    </span>
-                </td>
-
-                <td>
-
-                    <button class="btn btn-warning btn-sm">
-                        Edit
-                    </button>
-
-                    <button class="btn btn-danger btn-sm">
-                        Hapus
-                    </button>
-
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Kopi Arabica</td>
-                <td>Minuman</td>
-                <td>PT Kopi Nusantara</td>
-                <td>
-                    <span class="badge bg-primary">
-                        Distribusi
-                    </span>
-                </td>
-
-                <td>
-
-                    <button class="btn btn-warning btn-sm">
-                        Edit
-                    </button>
-
-                    <button class="btn btn-danger btn-sm">
-                        Hapus
-                    </button>
-
-                </td>
-
-            </tr>
-
-        </tbody>
-
-    </table>
 
 </div>
 

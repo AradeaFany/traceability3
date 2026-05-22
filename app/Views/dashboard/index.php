@@ -2,51 +2,37 @@
 
 <?= $this->section('content') ?>
 
-<div class="topbar">
-
-    <h3>
-        Dashboard Admin
-    </h3>
-
-    <p class="text-muted">
-        Food Supply Chain Monitoring System
-    </p>
-
-</div>
+<h2 class="mb-4">Dashboard</h2>
 
 <div class="row">
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4">
 
-        <div class="card p-4">
+        <div class="card shadow border-0">
 
-            <h5>Total Produk</h5>
+            <div class="card-body">
 
-            <h2>25</h2>
+                <h5>Total Produk</h5>
 
-        </div>
+                <h2>10</h2>
 
-    </div>
-
-    <div class="col-md-4 mb-4">
-
-        <div class="card p-4">
-
-            <h5>Total Batch</h5>
-
-            <h2>14</h2>
+            </div>
 
         </div>
 
     </div>
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4">
 
-        <div class="card p-4">
+        <div class="card shadow border-0">
 
-            <h5>Total Distribusi</h5>
+            <div class="card-body">
 
-            <h2>40</h2>
+                <h5>Total Batch</h5>
+
+                <h2>5</h2>
+
+            </div>
 
         </div>
 
@@ -54,52 +40,45 @@
 
 </div>
 
-<div class="card p-4">
+<div class="card mt-4 shadow border-0">
 
-    <h4 class="mb-4">
-        Aktivitas Supply Chain
-    </h4>
+    <div class="card-header bg-dark text-white">
+        Data Distribusi
+    </div>
 
-    <table class="table table-hover">
+    <div class="card-body">
 
-        <thead>
+        <table class="table table-hover">
 
-            <tr>
-                <th>No</th>
-                <th>Produk</th>
-                <th>Status</th>
-                <th>Tanggal</th>
-            </tr>
+            <thead>
 
-        </thead>
+                <tr>
+                    <th>No</th>
+                    <th>Produk</th>
+                    <th>Status</th>
+                    <th>Tanggal</th>
+                </tr>
 
-        <tbody>
+            </thead>
 
-            <tr>
-                <td>1</td>
-                <td>Beras Premium</td>
-                <td>
-                    <span class="badge bg-success">
-                        Diproses
-                    </span>
-                </td>
-                <td>22 Mei 2026</td>
-            </tr>
+            <tbody>
 
-            <tr>
-                <td>2</td>
-                <td>Kopi Arabica</td>
-                <td>
-                    <span class="badge bg-primary">
-                        Distribusi
-                    </span>
-                </td>
-                <td>22 Mei 2026</td>
-            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Kopi Arabica</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Selesai
+                        </span>
+                    </td>
+                    <td>22 Mei 2026</td>
+                </tr>
 
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
+
+    </div>
 
 </div>
 

@@ -2,124 +2,85 @@
 <html lang="id">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?= $title ?? 'Dashboard' ?></title>
+<title><?= $title ?? 'Traceability System' ?></title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+>
 
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-
-        body{
-            background: #f1f5f9;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .sidebar{
-            width: 260px;
-            height: 100vh;
-            background: #0f172a;
-            position: fixed;
-            left: 0;
-            top: 0;
-            padding-top: 20px;
-        }
-
-        .logo{
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-
-        .sidebar a{
-            display: block;
-            color: #cbd5e1;
-            padding: 15px 25px;
-            text-decoration: none;
-            transition: 0.3s;
-            border-left: 4px solid transparent;
-        }
-
-        .sidebar a:hover{
-            background: #1e293b;
-            color: white;
-            border-left: 4px solid #3b82f6;
-            padding-left: 30px;
-        }
-
-        .content{
-            margin-left: 260px;
-            padding: 30px;
-        }
-
-        .topbar{
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .card{
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .card:hover{
-            transform: translateY(-5px);
-        }
-
-    </style>
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+rel="stylesheet"
+>
 
 </head>
-<body>
 
-<div class="sidebar">
+<body class="bg-light">
 
-    <div class="logo">
-        TRACEABILITY
+<nav class="navbar navbar-dark bg-dark shadow">
+
+    <div class="container-fluid">
+
+        <span class="navbar-brand">
+            Traceability System
+        </span>
+
+        <a href="/logout" class="btn btn-danger btn-sm">
+            Logout
+        </a>
+
     </div>
 
-    <a href="/dashboard">
-        <i class="bi bi-grid-fill"></i> Dashboard
-    </a>
+</nav>
 
-    <a href="/produk">
-        <i class="bi bi-box-seam"></i> Produk
-    </a>
+<div class="container-fluid">
 
-    <a href="/dashboard">
-        <i class="bi bi-upc-scan"></i> Batch
-    </a>
+    <div class="row">
 
-    <a href="/dashboard">
-        <i class="bi bi-gear-fill"></i> Proses
-    </a>
+        <div class="col-md-2 bg-white shadow-sm min-vh-100 p-3">
 
-    <a href="#">
-        <i class="bi bi-truck"></i> Distribusi
-    </a>
+            <h5>MENU</h5>
 
-    <a href="/logout">
-        <i class="bi bi-box-arrow-right"></i> Logout
-    </a>
+            <hr>
 
-</div>
+            <ul class="nav flex-column">
 
-<div class="content">
+                <li class="nav-item mb-2">
+                    <a href="/" class="nav-link">
+                        <i class="bi bi-house"></i>
+                        Dashboard
+                    </a>
+                </li>
 
-    <?= $this->renderSection('content') ?>
+                <li class="nav-item mb-2">
+                    <a href="/produk" class="nav-link">
+                        <i class="bi bi-box"></i>
+                        Produk
+                    </a>
+                </li>
+
+                <li class="nav-item mb-2">
+                    <a href="/batch" class="nav-link">
+                        <i class="bi bi-upc-scan"></i>
+                        Batch
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md-10 p-4">
+
+            <?= $this->renderSection('content') ?>
+
+        </div>
+
+    </div>
 
 </div>
 
