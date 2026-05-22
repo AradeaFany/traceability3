@@ -12,7 +12,8 @@
 
         <div class="card-body">
 
-            <form>
+            <form action="/updateproduk/
+<?= $produk['id']; ?>" method="post">
 
                 <div class="mb-3">
                     <label>Nama Produk</label>
@@ -20,7 +21,9 @@
                     <input
                         type="text"
                         class="form-control"
-                        value="Beras Premium"
+                        value="<?= $produk['nama_produk']; ?>"
+                        name="nama_produk"
+
                     >
                 </div>
 
@@ -30,7 +33,8 @@
                     <input
                         type="text"
                         class="form-control"
-                        value="Pangan"
+                        value="<?= $produk['jenis']; ?>"
+                        name="jenis"
                     >
                 </div>
 

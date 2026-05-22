@@ -18,7 +18,7 @@
 
         </div>
 
-        <a href="#" class="btn btn-primary">
+        <a href="/batch/tambah" class="btn btn-primary">
             + Tambah Batch
         </a>
 
@@ -37,10 +37,10 @@
                         <tr>
 
                             <th>No</th>
-                            <th>Kode Batch</th>
-                            <th>Produk</th>
+                            <th>ID Produk</th>
+                            <th>Lokasi</th>
                             <th>Tanggal</th>
-                            <th>Status</th>
+                            <th>Kode Batch</th>
                             <th>Aksi</th>
 
                         </tr>
@@ -48,34 +48,24 @@
                     </thead>
 
                     <tbody>
-
+<?php foreach(
+$batch as $b
+): ?>
                         <tr>
 
-                            <td>1</td>
-                            <td>BT001</td>
-                            <td>Beras Premium</td>
-                            <td>22 Mei 2026</td>
+                            <td><?= $b['id']; ?></td>
+                            <td><?= $b['produk_id']; ?></td>
+                            <td><?= $b['lokasi']; ?></td>
+                            <td><?= $b['tanggal_panen']; ?></td>
+                            <td><?= $b['kode_batch']; ?></td>
+
+                    
 
                             <td>
-                                <span class="badge bg-success">
-                                    Distribusi
-                                </span>
-                            </td>
+                                <a href="/editbatch/<?= $b['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="/hapusbatch/<?= $b['id']; ?>" class="btn btn-sm btn-danger">Hapus</a>
 
-                            <td>
-
-                                <button class="btn btn-sm btn-info">
-                                    Detail
-                                </button>
-
-                                <button class="btn btn-sm btn-warning">
-                                    Edit
-                                </button>
-
-                                <button class="btn btn-sm btn-danger">
-                                    Hapus
-                                </button>
-
+<?php endforeach; ?>
                             </td>
 
                         </tr>

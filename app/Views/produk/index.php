@@ -15,7 +15,7 @@
             </p>
         </div>
 
-        <a href="#" class="btn btn-primary">
+        <a href="/produk/tambah" class="btn btn-primary">
             + Tambah Produk
         </a>
 
@@ -36,8 +36,6 @@
                             <th>No</th>
                             <th>Nama Produk</th>
                             <th>Kategori</th>
-                            <th>Kode Batch</th>
-                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
 
@@ -45,67 +43,49 @@
 
                     <tbody>
 
-                        <tr>
+<?php foreach($produk as $p): ?>
 
-                            <td>1</td>
+<tr>
 
-                            <td>Beras Premium</td>
+    <td>
+        <?= $p['id']; ?>
+    </td>
 
-                            <td>Pangan</td>
+    <td>
+        <?= $p['nama_produk']; ?>
+    </td>
 
-                            <td>BT001</td>
+    <td>
+        <?= $p['jenis']; ?>
+    </td>
 
-                            <td>
-                                <span class="badge bg-success">
-                                    Distribusi
-                                </span>
-                            </td>
+    <td>
 
-                            <td>
+        <a
+        href="/editproduk/<?= $p['id']; ?>"
+        class="btn btn-sm btn-warning">
 
-                                <button class="btn btn-sm btn-warning">
-                                    Edit
-                                </button>
+        Edit
 
-                                <button class="btn btn-sm btn-danger">
-                                    Hapus
-                                </button>
+        </a>
 
-                            </td>
 
-                        </tr>
+        <a
+        href="/hapusproduk/<?= $p['id']; ?>"
+        class="btn btn-sm btn-danger">
 
-                        <tr>
+        Hapus
 
-                            <td>2</td>
+        </a>
 
-                            <td>Minyak Goreng</td>
+    </td>
 
-                            <td>Sembako</td>
+</tr>
 
-                            <td>BT002</td>
+<?php endforeach; ?>
 
-                            <td>
-                                <span class="badge bg-primary">
-                                    Gudang
-                                </span>
-                            </td>
-
-                            <td>
-
-                                <button class="btn btn-sm btn-warning">
-                                    Edit
-                                </button>
-
-                                <button class="btn btn-sm btn-danger">
-                                    Hapus
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
+</tbody>
+                                
 
                 </table>
 

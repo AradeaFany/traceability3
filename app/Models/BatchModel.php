@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class BatchModel extends Model
 {
-    protected $table            = 'batches';
+    protected $table            = 'batch';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

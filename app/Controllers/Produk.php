@@ -6,10 +6,8 @@ use App\Models\ProdukModel;
 
 class Produk extends BaseController
 {
-
     public function index()
     {
-
         $model =
         new ProdukModel();
 
@@ -20,8 +18,9 @@ class Produk extends BaseController
             'produk/index',
             $data
         );
-
     }
+
+
 
 
 

@@ -12,12 +12,14 @@
 
         <div class="card-body">
 
-            <form>
+             <form action="/saveproduk" method="post">
+
 
                 <div class="mb-3">
                     <label>Nama Produk</label>
 
                     <input
+                        name="nama_produk"
                         type="text"
                         class="form-control"
                         placeholder="Masukkan nama produk"
@@ -25,12 +27,13 @@
                 </div>
 
                 <div class="mb-3">
-                    <label>Kategori</label>
+                    <label>Jenis</label>
 
                     <input
                         type="text"
                         class="form-control"
                         placeholder="Masukkan kategori"
+                        name="jenis"
                     >
                 </div>
 

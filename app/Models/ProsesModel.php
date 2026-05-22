@@ -15,7 +15,7 @@ class ProsesModel extends Model
     protected $allowedFields=[
 
                             'batch_id',
-                            'aktor',
+                            'status',
                             'keterangan',
                             'lokasi',
                             'tanggal'

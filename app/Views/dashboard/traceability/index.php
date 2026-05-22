@@ -28,8 +28,12 @@
 
                         <th>No</th>
                         <th>Produk</th>
-                        <th>Batch</th>
+                        <th>Kode</th>
+                        <th>Lokasi</th>
+                        <th>Tanggal</th>
+
                         <th>Status</th>
+
                         <th>Aksi</th>
 
                     </tr>
@@ -37,37 +41,22 @@
                 </thead>
 
                 <tbody>
-
+                <?php foreach($trace as $t): ?>
                     <tr>
 
                         <td>1</td>
-
-                        <td>Beras Premium</td>
-
-                        <td>BT001</td>
-
+                        <td><?= $t['nama_produk']; ?></td>
+                        <td><?= $t['kode_batch']; ?></td>
+                        <td><?= $t['lokasi']; ?></td>
+                        <td><?= $t['tanggal']; ?></td>
                         <td>
-
                             <span class="badge bg-success">
-                                Distribusi
+                                <?= $t['status']; ?>
                             </span>
-
                         </td>
-
-                        <td>
-
-                            <button class="btn btn-info btn-sm">
-                                Tracking
-                            </button>
-
-                            <button class="btn btn-primary btn-sm">
-                                Detail
-                            </button>
-
-                        </td>
-
+                       
                     </tr>
-
+                <?php endforeach; ?>
                 </tbody>
 
             </table>
