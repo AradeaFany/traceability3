@@ -6,8 +6,23 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-$routes->get('/', 'Auth::login');
+$routes->get(
+'/register',
+'User::register'
+);
 
-$routes->post('/ceklogin','Auth::cekLogin');
+$routes->post(
+'/saveuser',
+'User::save'
+);
 
-$routes->get('/logout','Auth::logout');
+
+$routes->get(
+'/login',
+'Auth::login'
+);
+
+$routes->get(
+'/logout',
+'Auth::logout'
+);
