@@ -25,8 +25,9 @@ rel="stylesheet"
         </h2>
 
         <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=http://localhost:8080/trace/1"
+            src="/qr"
             class="img-fluid"
+            width="300"
         >
 
         <div class="mt-4">
