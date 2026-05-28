@@ -31,7 +31,8 @@
                     </h6>
 
                     <h2 class="fw-bold">
-                        120
+                        <?= $totalProduk ?>
+
                     </h2>
 
                 </div>
@@ -51,7 +52,7 @@
                     </h6>
 
                     <h2 class="fw-bold">
-                        45
+                         <?= $totalBatch ?>
                     </h2>
 
                 </div>
@@ -71,7 +72,9 @@
                     </h6>
 
                     <h2 class="fw-bold">
-                        18
+                       
+<?= $distribusiAktif ?>
+
                     </h2>
 
                 </div>
@@ -91,7 +94,7 @@
                     </h6>
 
                     <h2 class="fw-bold">
-                        97
+                        <?= $produkSampai ?>
                     </h2>
 
                 </div>
@@ -125,29 +128,18 @@
                 </thead>
 
                 <tbody>
-
+                    <?php foreach($aktivitas as $a): ?>
                     <tr>
-                        <td>Beras Premium</td>
-                        <td>BT001</td>
+                        <td><?= $a['nama_produk']; ?></td>
+                        <td><?= $a['kode_batch']; ?></td>
                         <td>
                             <span class="badge bg-success">
-                                Dikirim
+<?= $a['status']; ?>
                             </span>
                         </td>
-                        <td>22 Mei 2026</td>
+                        <td><?= $a['tanggal']; ?></td>
                     </tr>
-
-                    <tr>
-                        <td>Minyak Goreng</td>
-                        <td>BT002</td>
-                        <td>
-                            <span class="badge bg-warning">
-                                Gudang
-                            </span>
-                        </td>
-                        <td>21 Mei 2026</td>
-                    </tr>
-
+<?php endforeach; ?>
                 </tbody>
 
             </table>

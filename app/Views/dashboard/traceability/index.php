@@ -54,6 +54,7 @@
                                 <?= $t['status']; ?>
                             </span>
                         </td>
+                        <td><img  src="/qrcode/<?= $t['id']; ?> "width="80"></td>
                        
                     </tr>
                 <?php endforeach; ?>

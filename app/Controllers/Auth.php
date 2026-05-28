@@ -7,10 +7,17 @@ use App\Models\UserModel;
 class Auth extends BaseController
 {
 
-    public function login()
-    {
-        return view('login');
-    }
+public function login()
+{
+
+if(session()->get('login'))
+{
+return redirect()->to('/dashboard');
+}
+
+return view('login');
+
+}
 
 
 
@@ -60,7 +67,11 @@ class Auth extends BaseController
                 ]);
 
                 return redirect()
-                ->to('/dashboard');
+->back()
+->with(
+'error',
+'Email atau password salah'
+);
 
             }
 

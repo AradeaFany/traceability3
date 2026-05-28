@@ -25,13 +25,19 @@ class Proses extends BaseController
 
 
     public function tambah()
-    {
+{
+$db = \Config\Database::connect();
 
-        return view(
-            'dashboard/proses/tambah'
-        );
+$data['batch'] =
+$db->table('batch')
+->get()
+->getResultArray();
 
-    }
+return view(
+'dashboard/proses/tambah',
+$data
+);
+}
 
 
     public function save()

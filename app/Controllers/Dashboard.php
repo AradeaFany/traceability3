@@ -2,65 +2,57 @@
 
 namespace App\Controllers;
 
-class Dashboard
-extends BaseController
+use Config\Database;
+
+class Dashboard extends BaseController
 {
-public function index()
+    public function index()
+    {
+
+
+if(!session()->get('login'))
 {
-
-if(
-!session()->get('login')
-){
-
-return redirect()
-->to('/login');
-
+return redirect()->to('/login');
 }
 
 
-$role =
-session()->get(
-'role'
-);
+        $db = Database::connect();
 
+        $data['totalProduk'] =
+        $db->table('produk')->countAll();
 
-if(
-$role=='supplier'
-){
+        $data['totalBatch'] =
+        $db->table('batch')->countAll();
 
-return view(
-'dashboard/supplier'
-);
+        $data['distribusiAktif'] =
+        $db->table('proses')
+        ->where('status !=','Selesai')
+        ->countAllResults();
 
-}
+        $data['produkSampai'] =
+        $db->table('proses')
+        ->where('status','Selesai')
+        ->countAllResults();
 
+        $data['aktivitas'] =
+        $db->table('proses')
+        ->join('batch',
+            'batch.id=proses.batch_id')
+        ->join('produk',
+            'produk.id=batch.produk_id')
+        ->select(
+            'produk.nama_produk,
+             batch.kode_batch,
+             proses.status,
+             proses.tanggal'
+        )
+        ->orderBy('proses.id','DESC')
+        ->get()
+        ->getResultArray();
 
-if(
-$role=='pabrik'
-){
-
-return view(
-'dashboard/pabrik'
-);
-
-}
-
-
-if(
-$role=='distributor'
-){
-
-return view(
-'dashboard/distributor'
-);
-
-}
-
-
-return view(
-'dashboard/index'
-);
-
-}
-
+        return view(
+            'dashboard/index',
+            $data
+        );
+    }
 }

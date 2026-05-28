@@ -166,7 +166,7 @@ body{
 
                 <li class="nav-item">
 
-                    <a href="/qr" class="nav-link">
+                    <a href="/tracking" class="nav-link">
 
                         <i class="bi bi-qr-code"></i>
 

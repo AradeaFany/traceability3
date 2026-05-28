@@ -170,7 +170,27 @@
         </div>
 
         <form action="/ceklogin" method="post">
+<?= csrf_field(); ?>
 
+<?php if(session()->getFlashdata('error')): ?>
+
+<div class="alert alert-danger">
+
+<?= session()->getFlashdata('error'); ?>
+
+</div>
+
+<?php endif; ?>
+
+<?php if(session()->getFlashdata('success')): ?>
+
+<div class="alert alert-success">
+
+<?= session()->getFlashdata('success'); ?>
+
+</div>
+
+<?php endif; ?>
             <div class="mb-3">
 
                 <label class="mb-2">Email</label>
@@ -224,7 +244,7 @@
         <div class="register-text">
 
             Belum punya akun?
-            <a href="#">
+            <a href="/register">
                 Register
             </a>
 

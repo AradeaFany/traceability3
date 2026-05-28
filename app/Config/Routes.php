@@ -5,7 +5,11 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-
+$routes->get('/','Auth::login');
+$routes->get(
+'/dashboard',
+'Dashboard::index'
+);
 $routes->get(
 '/register',
 'User::register'
@@ -145,4 +149,14 @@ $routes->post(
 $routes->get(
 '/traceability',
 'Traceability::index'
+);
+
+$routes->get(
+'/tracking/(:num)',
+'Traceability::detail/$1'
+);
+
+$routes->get(
+'/qrcode/(:num)',
+'Traceability::qrcode/$1'
 );

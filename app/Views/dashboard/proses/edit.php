@@ -12,7 +12,8 @@
                 Edit Proses
             </h3>
 
-            <form>
+            <form action="/updateproses/<?= $proses['id']; ?>"
+method="post">
 
                 <div class="mb-3">
 
@@ -23,7 +24,8 @@
                     <input
                         type="text"
                         class="form-control"
-                        value="Distribusi"
+                        value="<?= $proses['status']; ?>"
+                        name="status"
                     >
 
                 </div>
@@ -37,11 +39,39 @@
                     <input
                         type="text"
                         class="form-control"
-                        value="Bandung"
+                        value="<?= $proses['lokasi']; ?>"
+                        name="lokasi"
                     >
 
                 </div>
+                <div class="mb-3">
 
+                    <label class="form-label">
+                        Tanggal
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="<?= $proses['tanggal']; ?>"
+                        name="tanggal"
+                    >
+
+                </div>
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Keterangan
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="<?= $proses['keterangan']; ?>"
+                        name="keterangan"
+                    >
+
+                </div>
                 <button class="btn btn-warning">
                     Update
                 </button>

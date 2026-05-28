@@ -18,7 +18,7 @@
 
         </div>
 
-        <a href="#" class="btn btn-primary">
+        <a href="/proses/tambah" class="btn btn-primary">
 
             + Tambah Proses
 
@@ -42,6 +42,8 @@
                             <th>Status</th>
                             <th>Lokasi</th>
                             <th>Tanggal</th>
+                            <th>keterangan</th>
+
                             <th>Aksi</th>
 
                         </tr>
@@ -49,37 +51,59 @@
                     </thead>
 
                     <tbody>
+<?php foreach($proses as $p): ?>
 
                         <tr>
 
-                            <td>1</td>
+                            <td><?= $p['id']; ?></td>
 
                             <td>
+<?php
 
-                                <span class="badge bg-success">
-                                    Distribusi
-                                </span>
+$warna='secondary';
+
+if($p['status']=='Gudang')
+$warna='warning';
+
+elseif($p['status']=='Dikirim')
+$warna='primary';
+
+elseif($p['status']=='Sampai')
+$warna='success';
+
+?>
+
+<span class="badge bg-<?= $warna ?>">
+<?= $p['status'] ?>
+</span>
+                                
 
                             </td>
 
-                            <td>Bandung</td>
+                            <td><?= $p['lokasi']; ?></td>
 
-                            <td>22 Mei 2026</td>
+                            <td><?= $p['tanggal']; ?></td>
+                            <td><?= $p['keterangan']; ?></td>
 
                             <td>
 
-                                <button class="btn btn-warning btn-sm">
-                                    Edit
+                                    <a href="
+/editproses/
+<?= $p['id']; ?>
+" class="btn btn-sm btn-warning">Edit</a>
                                 </button>
 
-                                <button class="btn btn-danger btn-sm">
+                                <a href="
+/hapusproses/
+<?= $p['id']; ?>
+" class="btn btn-danger btn-sm">
                                     Hapus
-                                </button>
+</a>
 
                             </td>
 
                         </tr>
-
+<?php endforeach; ?>
                     </tbody>
 
                 </table>

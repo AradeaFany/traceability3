@@ -11,22 +11,40 @@
     <div class="card shadow border-0">
 
         <div class="card-body">
-
+<?php foreach($trace as $t): ?>
             <p>
                 <strong>Produk:</strong>
-                Beras Premium
+                <?= $t['nama_produk']; ?>
+
             </p>
 
             <p>
                 <strong>Batch:</strong>
-                BT001
+                <?= $t['kode_batch']; ?>
+
             </p>
 
             <p>
                 <strong>Status:</strong>
-                Distribusi
-            </p>
+                <?= $t['status']; ?>
 
+            </p>
+            <p>
+                <strong>Lokasi:</strong>
+                <?= $t['lokasi']; ?>
+
+            </p>
+            <p>
+                <strong>Tanggal:</strong>
+                <?= $t['tanggal']; ?>
+
+            </p>
+            <p>
+                <strong>Keterangan:</strong>
+                <?= $t['keterangan']; ?>
+
+            </p>
+<?php endforeach ?>
         </div>
 
     </div>
