@@ -15,7 +15,8 @@
             <form action="/updatebatch/<?= $batch['id']; ?>" method="post">
 
                 <div class="mb-3">
-                    <select  name="produk_id">
+                    <label>Nama Produk</label>
+                    <select  name="produk_id" class="form-control">
                     <?php foreach($produk as $p): ?> 
                     <option value="<?= $p['id']; ?>"<?=($p['id']==$batch['produk_id'])?'selected':''?>><?= $p['nama_produk']; ?>
 

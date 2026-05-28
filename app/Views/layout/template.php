@@ -115,7 +115,17 @@ body{
                     </a>
 
                 </li>
+                <?php if(
 
+                session()->get('role')
+                =='admin'
+
+                || 
+
+                session()->get('role')
+                =='supplier'
+
+                ): ?>
                 <li class="nav-item">
 
                     <a href="/produk" class="nav-link">
@@ -125,9 +135,19 @@ body{
                         Produk
 
                     </a>
-
+                <?php endif; ?>
                 </li>
+                <?php if(
 
+                session()->get('role')
+                =='admin'
+
+                || 
+
+                session()->get('role')
+                =='supplier'
+
+                ): ?>
                 <li class="nav-item">
 
                     <a href="/batch" class="nav-link">
@@ -139,7 +159,18 @@ body{
                     </a>
 
                 </li>
+                <?php endif; ?>
+                <?php if(
 
+                session()->get('role')
+                =='admin'
+
+                || 
+
+                session()->get('role')
+                =='pabrik'
+
+                ): ?>
                 <li class="nav-item">
 
                     <a href="/proses" class="nav-link">
@@ -149,8 +180,24 @@ body{
                         Proses
 
                     </a>
-
                 </li>
+                <?php endif; ?>
+                <?php if(
+
+                session()->get('role')
+                =='admin'
+
+                ||
+
+                session()->get('role')
+                =='distributor'
+
+                ||
+
+                session()->get('role')
+                =='konsumen'
+
+                ): ?>
 
                 <li class="nav-item">
 
@@ -163,19 +210,24 @@ body{
                     </a>
 
                 </li>
-
+                <?php endif; ?>
+        
+                <?php if(
+                session()->get('role')
+                =='admin'
+                ): ?>
                 <li class="nav-item">
 
-                    <a href="/tracking" class="nav-link">
+                    <a href="/user" class="nav-link">
 
-                        <i class="bi bi-qr-code"></i>
+                        <i class="bi bi-person-fill"></i>
 
-                        QR Code
+                        User
 
                     </a>
 
                 </li>
-
+                <?php endif; ?>
                 <li class="nav-item mt-4">
 
                     <a href="/logout" class="nav-link text-danger">

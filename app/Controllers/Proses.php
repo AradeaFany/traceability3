@@ -9,7 +9,25 @@ class Proses extends BaseController
 
     public function index()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model=
         new ProsesModel();
 
@@ -26,6 +44,25 @@ class Proses extends BaseController
 
     public function tambah()
 {
+    if(
+
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
 $db = \Config\Database::connect();
 
 $data['batch'] =
@@ -42,7 +79,25 @@ $data
 
     public function save()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model=
         new ProsesModel();
 
@@ -73,7 +128,25 @@ $data
 
     public function hapus($id)
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model=
         new ProsesModel();
 
@@ -85,7 +158,25 @@ $data
     }
     public function edit($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
 $model=
 new ProsesModel();
 
@@ -102,7 +193,25 @@ $data
 
 public function update($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='pabrik'
+
+&&
+
+session()->get('role')
+!='distributor'
+
+)
+{
+return redirect()->to('/dashboard');
+}
 $model=
 new ProsesModel();
 

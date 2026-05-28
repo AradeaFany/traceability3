@@ -7,9 +7,35 @@
     <!-- TITLE -->
     <div class="mb-4">
 
-        <h2 class="fw-bold">
-            Dashboard Traceability
-        </h2>
+        <?php if(session()->get('role') == 'admin'): ?>
+
+<h2>Dashboard Admin</h2>
+
+<?php endif; ?>
+
+
+<?php if(session()->get('role') == 'supplier'): ?>
+
+<h2>Dashboard Supplier</h2>
+
+<?php endif; ?>
+
+
+<?php if(session()->get('role') == 'pabrik'): ?>
+
+<h2>Dashboard Pabrik</h2>
+
+<?php endif; ?>
+<?php if(session()->get('role') == 'konsumen'): ?>
+
+<h2>Dashboard Konsumen</h2>
+
+<?php endif; ?>
+<?php if(session()->get('role') == 'distributor'): ?>
+
+<h2>Dashboard Distributor</h2>
+
+<?php endif; ?>
 
         <p class="text-muted">
             Monitoring supply chain produk secara realtime

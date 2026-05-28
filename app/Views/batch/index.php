@@ -48,12 +48,14 @@
                     </thead>
 
                     <tbody>
+                        <?php $no = 1; ?>
 <?php foreach(
 $batch as $b
 ): ?>
+
                         <tr>
 
-                            <td><?= $b['id']; ?></td>
+                            <td><?= $no++; ?></td>
                             <td><?= $b['produk_id']; ?></td>
                             <td><?= $b['lokasi']; ?></td>
                             <td><?= $b['tanggal_panen']; ?></td>

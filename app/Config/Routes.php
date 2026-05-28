@@ -19,7 +19,35 @@ $routes->post(
 '/saveuser',
 'User::save'
 );
+$routes->get(
+'/user',
+'User::index'
+);
 
+$routes->get(
+'/user/tambah',
+'User::tambah'
+);
+
+$routes->post(
+'/saveuser',
+'User::save'
+);
+
+$routes->get(
+'/edituser/(:num)',
+'User::edit/$1'
+);
+
+$routes->post(
+'/updateuser/(:num)',
+'User::update/$1'
+);
+
+$routes->get(
+'/hapususer/(:num)',
+'User::hapus/$1'
+);
 
 $routes->get(
 '/login',

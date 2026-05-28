@@ -28,7 +28,7 @@
 
                 <div class="mb-3">
                     <select
-                        name="produk_id">
+                        name="produk_id" class="form-control">
 
                         <?php foreach(
                         $produk as $p

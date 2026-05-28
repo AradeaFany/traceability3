@@ -6,8 +6,23 @@ use App\Models\ProdukModel;
 
 class Produk extends BaseController
 {
+    
     public function index()
     {
+        if(
+
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model =
         new ProdukModel();
 
@@ -18,6 +33,7 @@ class Produk extends BaseController
             'produk/index',
             $data
         );
+        
     }
 
 
@@ -26,7 +42,20 @@ class Produk extends BaseController
 
     public function tambah()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         return view(
             'produk/tambah'
         );
@@ -37,7 +66,20 @@ class Produk extends BaseController
 
     public function save()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model =
         new ProdukModel();
 
@@ -65,7 +107,20 @@ class Produk extends BaseController
 
     public function edit($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
     $model =
     new ProdukModel();
 
@@ -81,7 +136,20 @@ class Produk extends BaseController
 
     public function update($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
     $model =
     new ProdukModel();
 
@@ -115,7 +183,20 @@ class Produk extends BaseController
 
     public function delete($id)
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model =
         new ProdukModel();
 

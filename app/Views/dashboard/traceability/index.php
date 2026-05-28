@@ -40,11 +40,12 @@
 
                 </thead>
 
-                <tbody>
+                <tbody><?php $no = 1; ?>
                 <?php foreach($trace as $t): ?>
+                    
                     <tr>
 
-                        <td>1</td>
+                        <td><?= $no++; ?></td>
                         <td><?= $t['nama_produk']; ?></td>
                         <td><?= $t['kode_batch']; ?></td>
                         <td><?= $t['lokasi']; ?></td>

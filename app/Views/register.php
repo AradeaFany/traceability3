@@ -187,6 +187,9 @@
             <option value="distributor">
                 Distributor
             </option>
+            <option value="konsumen">
+                Konsumen
+            </option
 
             <!-- admin jangan ditampilkan -->
         </select>

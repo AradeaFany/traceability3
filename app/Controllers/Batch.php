@@ -10,7 +10,20 @@ class Batch extends BaseController
 
     public function index()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model =
         new BatchModel();
 
@@ -28,7 +41,20 @@ class Batch extends BaseController
 
     public function tambah()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $produk =
         new ProdukModel();
 
@@ -46,7 +72,20 @@ class Batch extends BaseController
 
     public function save()
     {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
         $model=
         new BatchModel();
 
@@ -90,7 +129,20 @@ class Batch extends BaseController
     }
     public function edit($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
     $batch =
     new BatchModel();
 
@@ -111,7 +163,20 @@ class Batch extends BaseController
 }
     public function update($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
     $model =
     new BatchModel();
 
@@ -143,7 +208,20 @@ class Batch extends BaseController
 
     public function delete($id)
 {
+if(
 
+session()->get('role')
+!='admin'
+
+&&
+
+session()->get('role')
+!='supplier'
+
+)
+{
+return redirect()->to('/dashboard');
+}
     $model =
     new BatchModel();
 

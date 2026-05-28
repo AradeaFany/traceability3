@@ -51,11 +51,12 @@
                     </thead>
 
                     <tbody>
+                        <?php $no = 1; ?>
 <?php foreach($proses as $p): ?>
 
                         <tr>
 
-                            <td><?= $p['id']; ?></td>
+                            <td><?= $no++; ?></td>
 
                             <td>
 <?php

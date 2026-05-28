@@ -42,13 +42,13 @@
                     </thead>
 
                     <tbody>
-
+<?php $no = 1; ?>
 <?php foreach($produk as $p): ?>
 
 <tr>
 
     <td>
-        <?= $p['id']; ?>
+        <?= $no++; ?>
     </td>
 
     <td>
